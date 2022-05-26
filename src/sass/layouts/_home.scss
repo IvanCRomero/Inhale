@@ -1,0 +1,4 @@
+@use "../utilities/function" as f;
+img.logo {
+  width: f.size(20);
+}

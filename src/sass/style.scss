@@ -1,0 +1,15 @@
+/*Root Style*/
+
+/**
+* Inhale app_0.1
+* Web Developments
+* Author: Ivan C Romero
+* Since: 14/05/2022
+*/
+
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" as boot;
+@forward "./base";
+@forward "./utilities";
+@forward "./components";
+@forward "./layouts";
+
