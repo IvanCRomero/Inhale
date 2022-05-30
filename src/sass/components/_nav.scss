@@ -1,15 +1,45 @@
+@use "../utilities/function" as f;
+@use "../utilities/breakpoints" as b;
+@use "../base/colors" as c;
+
 nav {
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-  
-    li { display: inline-block; }
-  
-    a {
-      display: block;
-      padding: 6px 12px;
-      text-decoration: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    @include b.breakpoint-down(medium) {
+      border-bottom: 2px c.$primary-color-intense solid;
+      &:hover{
+        border-color: c.$secondary-color-soft;
+      }
     }
   }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+    img.logo {
+      width: f.size(25);
+    }
+  }
+  .svg-inline--fa {
+    font-size: f.size(4);
+    color: c.$primary-color-intense;
+  }
+
+  .nav-link {
+    color: c.$primary-color-intense;
+    &:hover{
+      color: c.$secondary-color-soft;
+    }
+  }
+}

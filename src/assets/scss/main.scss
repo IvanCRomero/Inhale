@@ -1,0 +1,13 @@
+@use "../../sass/base/colors" as c;
+
+$primary: c.$primary-color-intense;
+$btn-border-width: 3px;
+$btn-border-radius-lg: 5rem;
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$theme-bg: hsla(0, 0%, 98%, 1);
+
+body {
+  background-color: $theme-bg;
+}

@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inhale | Home</title>
-    <link rel="stylesheet" href="./assets/scss/main.scss">
+    <link rel="stylesheet" href="./css/assets/main.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="ico" href="./assets/favicon/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon/inhale-icon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         crossorigin="anonymous"></script>
 </head>
@@ -16,40 +16,62 @@
 <body>
     <div class="container">
         <header class="header">
-            <nav class="navbar navbar-expand-lg bg-light">
+            <nav class="navbar navbar-expand-lg bg-light fixed-top">
                 <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <a class="navbar-brand" href="/">
-                    <img src="./assets/media/img/logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top logo">
-                  </a>
-                  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img src="./assets/media/img/logo.svg" alt="" class="d-inline-block align-text-top logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#signInMenu" aria-controls="signInMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div class="collapse navbar-collapse fw-bold" id="navbarMenu">
+                        <ul class="navbar-nav  ms-auto mb-2 mb-lg-0 mx-5">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Account</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapse navbar-collapse fw-bold" id="signInMenu">
+                        <ul class="navbar-nav  ms-auto mb-2 mb-lg-0 mx-5">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </nav>
+            </nav>
         </header>
-        <main class="body row">
-            <div class="body__header">
-                <h1>Inhale quality, inhale health, breath with us</h1>
-                <button>Let's do it</button>
+        <main class="body row mt-5">
+            <div class="body__top">
+                <div class="body__top-container">
+                    <h1 class="body__header-title">Inhale quality, inhale health, breath with us</h1>
+                    <button type="button" class="btn btn-outline-light btn-lg body__header-button" type="button">Let's
+                        do it</button>
+                </div>
             </div>
-            <section class="body__section">
-                <article class="article">
-                    <h2>What is inhale?</h2>
-                    <p>Inhale is a project aimed at collecting and analysing data in favour of combating air pollution
+            <section class="body__section mt-2">
+                <article class="article primary">
+                    <h2 class="article__title-pink text-center mb-2">What is inhale?</h2>
+                    <p class="article__paragraph">Inhale is a project aimed at collecting and analysing data in favour
+                        of combating air pollution
                         and
                         our environment in general. It is undoubtedly a necessity that we have today to take these
                         records
@@ -60,29 +82,35 @@
 
             </section>
             <section class="body__section">
-                <article class="article">
-                    <h2>Why inhale?</h2>
-                    <p>Inhale has established itself as a company to manage and lead a change in the alarming levels of
+                <article class="article secondary">
+                    <h2 class="article__title-blue text-center mb-2">Why inhale?</h2>
+                    <p class="article__paragraph">Inhale has established itself as a company to manage and lead a change
+                        in the alarming levels of
                         CO2
                         in our atmosphere. And it is already alarming, the tons of this pollutant in our ecosystem
                         entering
                         as a trigger for climate change and respiratory diseases.</p>
-                    <p>We are a solution for the future and the well-being of our species and terrestrial biodiversity,
-                        join
-                        us on this journey to change the air we breathe.</p>
+                    <p class="article__paragraph">We are a solution for the future and the well-being of our species and
+                        terrestrial biodiversity,
+                        join us on this journey to change the air we breathe.</p>
                 </article>
-                <button>Join to change</button>
+                <div class="d-flex justify-content-center aling-items-center mt-4">
+                    <button class="btn btn-lg btn-primary my-5 text-center">Join to change</button>
+                </div>
+
             </section>
             <section class="body__section">
-                <artticle class="article--box">
-                    <p class="article__title">Breath</p>
-                    <img src="" alt="" class="article__img">
-                </artticle>
+                <article class="article--box d-flex  justify-content-between aling-items-center">
+                    <p class="article__title-main">Breath</p>
+                    <img src="https://images.unsplash.com/photo-1571510811967-ad6b78c86ffe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=429&q=80"
+                        alt="" class="article__img">
+                </article>
             </section>
             <section class="body__section">
-                <article class="article">
-                    <h2>How will inhale act?</h2>
-                    <p>Inhale is developing a system to collect co2 levels through a sensor sensitive to these airborne
+                <article class="article secondary">
+                    <h2 class="article__title-blue text-center mb-2">How will inhale act?</h2>
+                    <p class="article__paragraph">Inhale is developing a system to collect co2 levels through a sensor
+                        sensitive to these airborne
                         particles. The fist step will be its inclusions in educational establishments, both primary and
                         secondary schools.
                         Following a trace also for small companies regulating also the health of students, teachers,
@@ -90,30 +118,44 @@
                         contractors, in order to propose solutions together.</p>
                 </article>
             </section>
-            <section class="body__section">
-                <artticle class="article--box">
+            <section class="body__section p-0">
+                <article class="article--banner mt-5 text-center">
                     <p class="article__title">What are you waiting for?</p>
-                    <button class="article__btn">I want to help</button>
-                </artticle>
+                    <button class="article__btn btn btn-outline-light btn-lg body__header-button my-2">I want to
+                        help</button>
+                </article>
             </section>
         </main>
         <footer class="footer row">
-            <div class="col-12 logo"><a href="#">Logo</a></div>
-            <div class="col-12">
-                <a href="#">facebook</a><a href="">Instagram</a><a href="">Twiter</a>
-                <a href="#">facebook</a><a href="">Instagram</a><a href="">Twiter</a>
-                <a href="#">facebook</a><a href="">Instagram</a><a href="">Twiter</a>
+            <a class="footer__logo d-flex justify-content-center align-items-center my-2" href="/">
+                <img class="logo-foot" src="./assets/media/img/logo.svg" alt="">
+            </a>
+            <div class="col-12 my-2">
+                <div class="d-flex justify-content-around align-items-center">
+                    <a href="#"><i class="fab fa-facebook icon"></i></a>
+                    <a href=""><i class="fab fa-instagram icon --pink"></i></a>
+                    <a href=""><i class="fab fa-twitter icon"></i></a>
+                </div>
             </div>
-            <ul class="col-12 nav-menu">
-                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Home</a></li>
-                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Services</a></li>
-                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Contact</a></li>
-                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Account</a></li>
+            <ul class="col-12 footer__menu d-flex justify-content-between align-items-center ">
+                <li class="footer__item"><a href="#" class="nav-menu__link">Home</a></li>|
+                <li class="footer__item"><a href="#" class="nav-menu__link">Services</a></li>|
+                <li class="footer__item"><a href="#" class="nav-menu__link">Contact</a></li>|
+                <li class="footer__item"><a href="#" class="nav-menu__link">Account</a></li>
+            </ul>
+            <ul class="footer__info d-flex flex-column justify-content-center align-items-center ">
+                <li>info@inhale.com</li>
+                <li>+34 987 73 79</li>
+                <li>Policy and privacy Cookies</li>
+                <li>Conditions of use &copy; Inhale 2022</li>
+                <li></li>
             </ul>
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="module" src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

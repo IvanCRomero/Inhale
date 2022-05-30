@@ -6,10 +6,7 @@
 * Author: Ivan C Romero
 * Since: 14/05/2022
 */
-
-@use "../../node_modules/bootstrap/scss/bootstrap.scss" as boot;
-@forward "./base";
 @forward "./utilities";
+@forward "./base";
 @forward "./components";
 @forward "./layouts";
-

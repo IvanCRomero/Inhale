@@ -149,12 +149,5 @@
   font-style: italic;
 }
 
-:root {
-  --font-inter: "aileron";
-}
-
-body {
-  font-family: var(--font-inter);
-  font-weight: 200;
-}
+$font-inter: "aileron";
  
