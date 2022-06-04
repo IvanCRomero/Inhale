@@ -1,0 +1,40 @@
+@use "../utilities/function" as f;
+@use "../base/colors" as c;
+@use "../utilities/mixin" as m;
+@use "../utilities/breakpoints" as b;
+
+.body {
+  &__top-contact {
+    @include m.background-img(40);
+    background-image: url("https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  .contact-form {
+    top: (f.size(50) * -1);
+    margin: f.size(3);
+    padding: f.size(0.2);
+    background-color: f.tint(c.$neutral-color-white, 100%);
+    border-radius: f.size(5);
+    border: f.size(0.25) solid c.$primary-color-soft;
+
+    .form__title {
+      color: c.$primary-color-intense;
+      margin: f.size(4);
+    }
+    .form__message {
+      margin: 4rem 1rem;
+    }
+  }
+}
+label#termsConditions-error.error {
+  bottom: f.size(39);
+  margin: 2rem 1rem 4rem 1rem;
+  @include b.breakpoint(large){
+    margin: 2rem 1rem 5rem 1rem;
+  }
+  width: 90%;
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inhale | G</title>
+    <title>Inhale | Log In</title>
     <link rel="stylesheet" href="./css/assets/main.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon/inhale-icon.ico">
@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <div id="preloader"></div>
     <div class="container-fluid">
         <header class="header">
             <nav class="navbar navbar-expand-lg bg-light fixed-top">
@@ -62,84 +61,46 @@
             </nav>
         </header>
         <main class="body">
-            <div class="body__top my-5">
-                <div class="body__top-container">
-                    <h1 class="body__header-title">Inhale quality, inhale health, breath with us</h1>
-                    <button type="button" class="btn btn-outline-light btn-lg body__header-button" type="button">Let's
-                        do it</button>
+            <div class="row">
+                <div class="col-12 col-sm-1 col-md-2 col-lg-3"></div>
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                    <div class="body__form login-form">
+                        <h1 class="form__title">Login</h1>
+                        <form action="" class="form" id="form">
+                            <div class="form__group " id="group__email">
+                                <label for="email" class="form__label">Email:</label>
+                                <div class="form__group-input">
+                                    <input class="form__input" type="email" name="email" id="email">
+                                    <i class="form__validation fas fa-times-circle"></i>
+                                </div>
+                            </div>
+                            <div class="form__group" id="group__password">
+                                <label for="password" class="form__label">Password:</label>
+                                <div class="form__group-input">
+                                    <input class="form__input" type="password" name="password" id="password">
+                                    <i class="form__validation fas fa-times-circle"></i>
+                                </div>
+                            </div>
+                            <div class="form__group" id="group__remember">
+                                <label for="remember">
+                                    <input class="form__checkbox" type="checkbox" name="remember" id="remember">
+                                    Remember me</label>
+                            </div>
+                            <div class="form__message" id="form__message">
+                                <p><span></span> <i class="fas fa-exclamation-triangle"></i></p>
+                            </div>
+                            <div class="form__group form__group-btn-send text-center">
+                                <button type="submit" class="btn btn-outline-light">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-1 col-md-2 col-lg-3"></div>
+                <div class="text-center">
+                    <p>You don't have account <a href="./signup.html">join now</a></p>
+                    <p><a href="">forgot your password?</a></p>
                 </div>
             </div>
-            <section class="body__section mt-2">
-                <div class="row">
-                    <div class="col-12 col-sm-6">
-                        <article class="article primary">
-                            <h2 class="article__title-pink text-center mb-2">What is inhale?</h2>
-                            <p class="article__paragraph">Inhale is a project aimed at collecting and analysing data in
-                                favour
-                                of combating air pollution
-                                and
-                                our environment in general. It is undoubtedly a necessity that we have today to take
-                                these
-                                records
-                                to transform them into media solutions, besides that it is not only for the individual
-                                good, but
-                                as
-                                a collective, as a species and responsible for our home, the earth.</p>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <article class="article secondary">
-                            <h2 class="article__title-blue text-center mb-2">Why inhale?</h2>
-                            <p class="article__paragraph">Inhale has established itself as a company to manage and lead
-                                a change
-                                in the alarming levels of
-                                CO2
-                                in our atmosphere. And it is already alarming, the tons of this pollutant in our
-                                ecosystem
-                                entering
-                                as a trigger for climate change and respiratory diseases.</p>
-                            <p class="article__paragraph">We are a solution for the future and the well-being of our
-                                species and
-                                terrestrial biodiversity,
-                                join us on this journey to change the air we breathe.</p>
-                        </article>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center aling-items-center mt-4">
-                    <button class="btn btn-lg btn-primary my-5 text-center">Join to change</button>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <article class="article--box d-flex  justify-content-between aling-items-center">
-                            <p class="article__title-main">Breath</p>
-                            <img src="https://images.unsplash.com/photo-1571510811967-ad6b78c86ffe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=429&q=80"
-                                alt="" class="article__img">
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <article class="article secondary">
-                            <h2 class="article__title-blue text-center mb-2">How will inhale act?</h2>
-                            <p class="article__paragraph">Inhale is developing a system to collect co2 levels through a
-                                sensor
-                                sensitive to these airborne
-                                particles. The fist step will be its inclusions in educational establishments, both
-                                primary and
-                                secondary schools.
-                                Following a trace also for small companies regulating also the health of students,
-                                teachers,
-                                workers etc. This information will be stored but also analysed and notified to their
-                                contractors, in order to propose solutions together.</p>
-                        </article>
-                    </div>
-                </div>
-
-                <article class="article--banner mt-5 text-center">
-                    <p class="article__title">What are you waiting for?</p>
-                    <button class="article__btn btn btn-outline-light btn-lg body__header-button my-2">I want to
-                        help</button>
-                </article>
-            </section>
         </main>
         <footer class="footer">
             <a class="footer__logo d-flex justify-content-center align-items-center my-2" href="/">
@@ -170,6 +131,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script type="module" src="./js/modules/form.js"></script>
     <script src="./js/app.js" type="module"></script>
 </body>
 

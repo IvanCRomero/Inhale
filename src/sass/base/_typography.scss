@@ -1,3 +1,5 @@
+@use '../utilities/breakpoints' as b;
+@use '../utilities/function' as f;
 h1,
 h2,
 h3 {
@@ -8,4 +10,13 @@ a,
 a:visited,
 a:active {
     text-decoration: none;
+}
+p{
+  font-size: f.size(3.6);
+  @include b.breakpoint(medium) {
+    font-size: f.size(3.5);
+  }
+  @include b.breakpoint(large) {
+    font-size: 1.8vw;
+  }
 }

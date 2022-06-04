@@ -1,35 +1,68 @@
 @use "../base/colors" as c;
 
 @use "../utilities/function" as f;
-.footer{
-    &__logo{
-        img{
-            
-            width: f.size(40);
-        }
+
+@use "../utilities/breakpoints" as b;
+
+.footer {
+  border-top: f.size(0.5) solid c.$primary-color-intense;
+  width: 100%;
+  padding: 0 f.size(2);
+  font-size: 4.5vw;
+  @include b.breakpoint(medium) {
+    font-size: 3vw;
+  }
+  @include b.breakpoint(large) {
+    font-size: f.size(5);
+  }
+  
+  &__logo {
+    img {
+      width: f.size(40);
     }
-    &__menu{
-        list-style: none;
-        font-weight: 200;
+  }
+  &__menu {
+    list-style: none;
+    font-weight: 200;
+    padding: 0;
+    @include b.breakpoint(medium) {
+      padding: 2rem 6rem;
     }
-    &__info{
-        list-style: none;
-        
+    @include b.breakpoint(large) {
+      padding: 2rem 20rem;
     }
+  }
+  &__info {
+    list-style: none;
+    padding: 0;
+  }
+  &__socialmedia {
+    @include b.breakpoint(medium) {
+      padding-right: 10rem;
+      padding-left: 10rem;
+    }
+    @include b.breakpoint(large) {
+      padding: 2rem 20rem;
+    }
+  }
 }
-.icon{
-    font-size: f.size(10);
-    &:hover{
-        color: f.tint(c.$primary-color-intense, 10%);
-        transform: scale(1.5);
-        transition: 50ms;
-    }
+.icon {
+  font-size: f.size(10);
+  &:hover {
+    color: f.tint(c.$primary-color-intense, 10%);
+    transform: scale(1.5);
+    transition: 50ms;
+  }
+  @include b.breakpoint(medium) {
+    margin-top: f.size(4);
+    margin-bottom: f.size(4);
+  }
 }
-.--pink{
-    color: c.$secondary-color-intense;
-    &:hover{
-        transform: scale(1.5);
-        color: f.tint(c.$secondary-color-intense, 10%);
-        transition: 50ms;
-    }
+.--pink {
+  color: c.$secondary-color-intense;
+  &:hover {
+    transform: scale(1.5);
+    color: f.tint(c.$secondary-color-intense, 10%);
+    transition: 50ms;
+  }
 }

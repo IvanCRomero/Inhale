@@ -1,0 +1,42 @@
+@use "../utilities/function" as f;
+@use "../base/colors" as c;
+@use "../utilities/mixin" as m;
+
+.body {
+    margin-bottom: f.size(10);
+  .login-form {
+    margin-top: f.size(20);
+    margin-bottom: f.size(5);
+    background-color: c.$primary-color-intense;
+    border-radius: f.size(5);
+    padding: f.size(2);
+    .form {
+      &__input {
+        &:hover {
+          cursor: pointer;
+          background-color: f.tint(c.$neutral-color-grey, 90%);
+        }
+        &:focus {
+          border: f.size(0.3) solid c.$neutral-color-black;
+          outline: none;
+          box-shadow: f.size(0.3) 0 f.size(5)
+            change-color(c.$neutral-color-black, $alpha: 0.4);
+        }
+      }
+      &__label {
+        font-weight: 300;
+        font-size: f.size(3.2);
+        padding: f.size(2);
+        cursor: pointer;
+        color: c.$neutral-color-white;
+      }
+      &__group {
+        color: c.$neutral-color-white;
+      }
+    }
+    .form__title {
+      color: c.$neutral-color-white;
+      padding: f.size(4);
+    }
+  }
+}

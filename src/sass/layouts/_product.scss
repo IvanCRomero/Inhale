@@ -1,0 +1,30 @@
+@use "../utilities/function" as f;
+@use "../base/colors" as c;
+@use "../utilities/mixin" as m;
+
+.body {
+  &__top-products {
+    
+    @include m.background-img(50);
+    background-image: url("https://images.unsplash.com/photo-1614886205583-92fe9eaa38fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+
+  }
+  &__title {
+    background-color: c.$secondary-color-intense;
+    color: c.$neutral-color-white;
+  }
+  &__title-blue {
+    background-color: c.$primary-color-intense;
+    color: c.$neutral-color-white;
+  }
+  &__section--img-1 {
+    @include m.background-img(40);
+    background-image: url("https://images.unsplash.com/photo-1631378297854-185cff6b0986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80");
+
+  }
+
+  &__section--img-2 {
+    @include m.background-img(50);
+    background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  }
+}

@@ -34,6 +34,17 @@ nav {
   .svg-inline--fa {
     font-size: f.size(4);
     color: c.$primary-color-intense;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+
+  i{
+    font-size: f.size(4);
+    color: c.$primary-color-intense;
+    &:hover{
+      transform: scale(1.2);
+    }
   }
 
   .nav-link {

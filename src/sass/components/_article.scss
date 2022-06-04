@@ -1,12 +1,15 @@
 @use "../base/colors" as c;
 
 @use "../utilities/function" as f;
+
+@use "../utilities/breakpoints" as b;
+
 .article {
   width: 100vw;
   min-height: 100px;
   max-height: 600px;
   height: 50vh;
-  margin-top: f.size(10);
+  margin: 1rem 0;
   &__title-blue {
     color: c.$primary-color-intense;
   }
@@ -20,12 +23,14 @@
   &__title-main {
     font-weight: bolder;
     color: c.$neutral-color-white;
-    font-size: f.size(10);
-    transform: rotate(270deg) translate(-120px, 25px);
+    font-size: 10vh;
+    transform: rotate(270deg) translate(-150px, 25px);
     margin: 0;
     width: 20%;
     height: fit-content;
-    // position: absolute;
+    @include b.breakpoint(medium) {
+      transform: rotate(270deg) translate(-200px, 60px);
+    }
   }
   &__img {
     width: 60%;
@@ -33,6 +38,7 @@
 
   &__paragraph {
     margin-top: f.size(2);
+
     font-weight: 200;
   }
 
@@ -40,7 +46,6 @@
     width: 100%;
     background-color: c.$primary-color-soft;
     padding: f.size(2);
-    border-bottom: f.size(1) c.$primary-color-intense solid;
   }
   &__title {
     color: c.$neutral-color-white;

@@ -1,0 +1,24 @@
+@use "../utilities/function" as f;
+
+@use "../utilities/breakpoints" as b;
+
+@use "../base/colors" as c;
+.body {
+  &__section-about {
+    .article {
+      display: contents;
+      &__title{
+        color: c.$primary-color-intense;
+      }
+    }
+    p {
+      font-size: f.size(3.6);
+      @include b.breakpoint(medium) {
+        font-size: f.size(3.5);
+      }
+      @include b.breakpoint(large) {
+        font-size: 1.2vw;
+      }
+    }
+  }
+}
