@@ -9,23 +9,8 @@ import * as Cookies from "../utils/cookies.js";
 
 export function validateLogInForm() {
   $("#form").validate({
-    submitHandler: function (form) {
-      let email = $("#email").val();
-      let password = $("#password").val();
-      let logInData = new LogInFormData(email, password);
-      if ($("#remember")[0].checked) {
-        Cookies.setCookie("email", email, 1);
-      }
-      const data = JSON.stringify(logInData);
-      const request = $.ajax({
-        type: post,
-        url: "url",
-        data: data,
-        dataType: "json",
-        success: function (response) {
-          
-        }
-      });
+    submitHandler: function(form) {
+      $(form).ajaxSubmit();
     },
     invalidHandler: function (event, validator) {
       var errors = validator.numberOfInvalids();

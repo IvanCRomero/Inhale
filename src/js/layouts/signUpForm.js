@@ -12,34 +12,14 @@ export function validateSigUpForm() {
     submitHandler: function (form) {
       if ($("input[name=organizationType]").parent().hasClass("selected")) {
         if ($("#terms")[0].checked) {
-          let organizationName = $("#organizationName").val();
-          let administratorName = $("#administratorName").val();
-          let email = $("#email").val();
-          let password = $("#password").val();
-          let confirmPassword = $("#confirmPassword").val();
-          let terms = "true";
-          let selected = $(
-            "input[name=organizationType]:checked",
-            "#form"
-          ).val();
-          let contactData = new SignUpFormData(
-            organizationName,
-            administratorName,
-            email,
-            password,
-            confirmPassword,
-            terms,
-            selected
-          );
-          const data = JSON.stringify(contactData);
+          $(form).ajaxSubmit();
         } else {
           alert("You must accept the terms and conditions to continue");
         }
-      }else{
+      } else {
         alert("You must selected your organization type to continue");
       }
-
-      form.submit();
+      form.reset();
     },
     invalidHandler: function (event, validator) {
       var errors = validator.numberOfInvalids();

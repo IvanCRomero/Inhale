@@ -9,19 +9,7 @@ import { ContactFormData } from "../classes/contact.class.js";
 export function validateContactForm() {
   $("#form").validate({
     submitHandler: function (form) {
-      $("#submit").click(function (e) {
-        if ($("#termsConditions")[0].checked) {
-          let name = $("#name").val();
-          let email = $("#email").val();
-          let number = $("#number").val();
-          let comment = $("#comment").val();
-          let notification = $("#notification")[0].checked;
-          let contactData = new ContactFormData(name, email, number, comment);
-          const data = JSON.stringify(contactData);
-        } else {
-          alert("You must accept the terms and conditions to continue");
-        }
-      });
+      $(form).ajaxSubmit();
     },
     invalidHandler: function (event, validator) {
       var errors = validator.numberOfInvalids();

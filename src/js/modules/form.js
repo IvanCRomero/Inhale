@@ -50,10 +50,25 @@ $.validator.methods.number = function (value, element) {
 
 if (currentURL === URL.logIn) {
   LogIn.validateLogInForm();
+  handlerSubmit();
 } else if (currentURL === URL.signUp) {
   SignUp.validateSigUpForm();
+  handlerSubmit();
 } else if (currentURL === URL.contact) {
-  Contact.validateContactForm();
+  
+  handlerSubmit(Contact.validateContactForm());
+}
+
+function handlerSubmit(jsonData){
+  $("#submit").click(function (e) { 
+    if ($("#form").valid()===false) {
+      return;
+    } 
+    let data;
+    console.log(data)
+    
+    
+  });
 }
 
 function validateInputForm(e) {
